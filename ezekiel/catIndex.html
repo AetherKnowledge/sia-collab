@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D PUSSY CAT BOX</title>
+    <link rel="stylesheet" href="catStyle.css">
+</head>
+<body>
+    <h1>3D PUSSY CAT BOX</h1>
+    <div class="box">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+    <button onclick="toggleRotation()">STOP</button>
+
+    <a href="test.html" target="_self">
+      <button class="back-button">Back</button>
+    </a>
+
+    <script>
+        const box = document.querySelector('.box');
+        let isRotating = true;
+
+        function toggleRotation() {
+            if (isRotating) {
+                box.style.animationPlayState = 'paused';
+                isRotating = false;
+            } else {
+                box.style.animationPlayState = 'running';
+                isRotating = true;
+            }
+        }
+    </script>
+</body>
+</html>
